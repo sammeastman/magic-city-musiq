@@ -29,9 +29,14 @@ router.post("/", async (req, res, next) => {
     try {
         const mname = req.body.mname;
         const mbio = req.body.mbio;
+        const mspotifyid = req.body.mbio;
+        const mdob = req.body.mdob;
+        const mzodiac = req.body.mzodiac;
+        const mhometown = req.body.mhometown;
+        const mage = req.body.mage;
         
 
-        const dbRes = await db.musicians.insert(mname, mbio);
+        const dbRes = await db.musicians.insert(mname, mbio, mspotifyid, mdob, mzodiac, mhometown, mage);
 
         res.send(dbRes);
     } catch (error) {
@@ -41,3 +46,6 @@ router.post("/", async (req, res, next) => {
 });
 
 export default router;
+
+
+
