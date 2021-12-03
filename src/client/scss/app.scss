@@ -1,7 +1,6 @@
 $theme-colors: (
-    'primary': green
+  "primary": green,
 );
-
 
 // H1 {
 //     text-align: center;
@@ -10,73 +9,95 @@ $theme-colors: (
 //     border-top: 1px solid black;
 // }
 
-.row {
-    max-width: 30%;
-        display: flex;
-        flex-direction: row;
+.row > img {
+  max-width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-     
+.row > img:hover {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+    cursor: pointer;
+}
+
+p:hover {
+    color: rgb(238, 238, 93);
+    cursor: pointer;
 }
 
 .container {
-    background-color: #000000;
-    
-
+  background-color: #000000;
+  padding-top: 7em;
 }
 
-
 :root {
-    --shadow-color: #FF9E9E;
-    --shadow-color-light: white;
-  }
-  
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: "Archivo", sans-serif;
-    background-color: #000000;
-    // background-image: url("https://cdn.wallpapersafari.com/20/94/wZu54m.jpg");
-  }
-  
-  p {
-    margin: calc(50vh - 40px) auto 0 auto;
-    font-size: 65px;
-    text-transform: uppercase;
-    font-family: "Archivo Black", "Archivo", sans-serif;
-    font-weight: normal;
-    display: block;
-    height: auto;
-    text-align: center;
-    padding-top: 120px;
-    background-image: url("https://media.istockphoto.com/vectors/birmingham-city-skyline-black-and-white-silhouette-vector-id499134094?k=20&m=499134094&s=612x612&w=0&h=7vsx_sMg_hSNYDYYA4Wx_uoNnyXn9XmgX076jPBeW5Y=");
-  }
-  
-  .logo-1 {
-    color: white;
-    animation: neon 3s infinite;
-  }
-  
-  @keyframes neon {
-    0% {
-      text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
-      0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
-      0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
-    }
-    50% {
-      text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
-      0 0 5px var(--shadow-color-light), 0 0 15px var(--shadow-color-light), 0 0 25px var(--shadow-color-light),
-      0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 60px var(--shadow-color), 0 0 80px var(--shadow-color), 0 0 110px var(--shadow-color), 0 0 210px var(--shadow-color);
-    }
-    100% {
-      text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
-      0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
-      0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
-    }
-  }
+  --shadow-color: #ff9e9e;
+  --shadow-color-light: white;
+}
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+body {
+  font-family: "Archivo", sans-serif;
+  background-color: #000000 !important;
+  // background-image: url("https://cdn.wallpapersafari.com/20/94/wZu54m.jpg");
+}
+
+p {
+  margin: calc(50vh - 40px) auto 0 auto;
+  font-size: 65px;
+  text-transform: uppercase;
+  font-family: "Archivo Black", "Archivo", sans-serif;
+  font-weight: normal;
+  display: block;
+  height: auto;
+  text-align: center;
+  padding-top: 120px;
+  background-image: url("https://media.istockphoto.com/vectors/birmingham-city-skyline-black-and-white-silhouette-vector-id499134094?k=20&m=499134094&s=612x612&w=0&h=7vsx_sMg_hSNYDYYA4Wx_uoNnyXn9XmgX076jPBeW5Y=");
+}
+
+.logo-1 {
+  color: white;
+  animation: neon 3s infinite;
+}
+
+@keyframes neon {
+  0% {
+    text-shadow: -1px -1px 1px var(--shadow-color-light),
+      -1px 1px 1px var(--shadow-color-light),
+      1px -1px 1px var(--shadow-color-light),
+      1px 1px 1px var(--shadow-color-light), 0 0 3px var(--shadow-color-light),
+      0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+      0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color),
+      0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color),
+      0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+  }
+  50% {
+    text-shadow: -1px -1px 1px var(--shadow-color-light),
+      -1px 1px 1px var(--shadow-color-light),
+      1px -1px 1px var(--shadow-color-light),
+      1px 1px 1px var(--shadow-color-light), 0 0 5px var(--shadow-color-light),
+      0 0 15px var(--shadow-color-light), 0 0 25px var(--shadow-color-light),
+      0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color),
+      0 0 60px var(--shadow-color), 0 0 80px var(--shadow-color),
+      0 0 110px var(--shadow-color), 0 0 210px var(--shadow-color);
+  }
+  100% {
+    text-shadow: -1px -1px 1px var(--shadow-color-light),
+      -1px 1px 1px var(--shadow-color-light),
+      1px -1px 1px var(--shadow-color-light),
+      1px 1px 1px var(--shadow-color-light), 0 0 3px var(--shadow-color-light),
+      0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+      0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color),
+      0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color),
+      0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+  }
+}
+
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
