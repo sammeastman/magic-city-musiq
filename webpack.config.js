@@ -13,6 +13,10 @@ const serverConfig = {
 				options: {
 					configFile: 'tsconfig.server.json'
 				}
+			},
+			{
+				test: /\.(png|jpg|jpeg|gif)$/i,
+				type: 'asset/resource'
 			}
 		]
 	},
