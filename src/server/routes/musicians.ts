@@ -3,6 +3,15 @@ import db from "../db";
 
 const router = express.Router();
 
+router.get('/', async (req, res) => {
+	try {
+		res.json(await db.musicians.all());
+	} catch (e) {
+		console.log(e);
+		res.sendStatus(500);
+	}
+});
+
 router.get('/:musicianid', async (req, res, next) => {
     try {
         const musicianid = req.params.musicianid;

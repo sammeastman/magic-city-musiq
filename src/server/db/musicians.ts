@@ -1,5 +1,5 @@
 import { Query } from "./index";
-
+const all = async () => Query('SELECT * FROM Musicians');
 const one = (musicianmid: string) => Query("SELECT * FROM musicians WHERE musicians.mid = ?", [musicianmid]);
 
 const insert = (mname: string, mbio: string) => Query(`
@@ -8,6 +8,7 @@ const insert = (mname: string, mbio: string) => Query(`
 `, [mname, mbio]);
 
 export default {
+    all,
     one,
     insert
 }
