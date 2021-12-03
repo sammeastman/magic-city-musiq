@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import EventCards from './EventCards';
-import Compose from './Compose';
+
 
 const Home = (props: IHomeProps) => {
     const [events, setEvents] = useState([]);
@@ -18,7 +18,7 @@ const Home = (props: IHomeProps) => {
     return (
         <div className="container">
             <div className="row">
-                <Compose />
+                
             </div>
             <div className="row">
                 {events.map(event => <EventCards key={event.id} event={event}/>) }
