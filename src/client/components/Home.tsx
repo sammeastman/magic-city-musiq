@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+
 import EventCard from './EventCards';
 import MusicianCard from "./MusicianCards";
 import { Link } from 'react-router-dom';
@@ -11,14 +12,13 @@ const Home = (props: IHomeProps) => {
         fetchEvents();
         // fetchMusicians()
     }, []);
-    // ​
-    //     useEffect(() => {
-    //         fetchMusicians();
-    //     }, []);
+
+
 
     const fetchEvents = async () => {
         const res = await fetch("/api/events");
         const events = await res.json();
+
         console.log(events)
         setEvents(events);
     }
@@ -74,8 +74,10 @@ const Home = (props: IHomeProps) => {
 
         </div>
 
-    )
-}
+        )
+    }
+
+
 
 interface IHomeProps { }
 

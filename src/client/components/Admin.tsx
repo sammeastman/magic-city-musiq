@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
-​
+
 const Admin = (props: IAdminProps) => {
     const [event, setEvent] = useState<IEvent>({
         eid: null,
@@ -18,7 +18,7 @@ const Admin = (props: IAdminProps) => {
     const [eend, setEend] = useState('');
     const { eventeid } = useParams<{ eventeid: string }>();
     const history = useHistory();
-​
+
     useEffect(() => {
         (async () => {
             const res = await fetch(`/api/events/${eventeid}`);
@@ -30,17 +30,19 @@ const Admin = (props: IAdminProps) => {
             setEend(event.Eend);
         })()
     }, []);
-​
+
+
     const handleEventChange = (ename: string) => setEname(ename);
-​
+
+
     const handleDeleteEvent = async (eid: string) => {
         await fetch(`/api/events/${eid}`, {
             method: "DELETE"
         });
-​
+
         history.push("/");
     }
-​
+
     const handleUpdateEvent = async (eventeid: string, ename: string, elocation: string, estart: string, eend: string) => {
         await fetch(`/api/events/${eventeid}`, {
             method: "PUT",
@@ -49,10 +51,10 @@ const Admin = (props: IAdminProps) => {
             },
             body: JSON.stringify({ ename, elocation, estart, eend })
         });
-​
+
         history.push("/");
     }
-​
+
     return (
         <>
             <div className="card m-3 d-flex justify-content-between align-items-center flex-row">
@@ -72,9 +74,9 @@ const Admin = (props: IAdminProps) => {
         </>
     )
 }
-​
+
+
 interface IAdminProps { }
-​
 interface IEvent {
     eid: string | null
     ename: string | null,
@@ -84,5 +86,5 @@ interface IEvent {
     estart: string | null,
     eend: string | null,
 }
-​
+
 export default Admin
