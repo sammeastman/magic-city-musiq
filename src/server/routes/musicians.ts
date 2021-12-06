@@ -3,6 +3,11 @@ import db from "../db";
 
 const router = express.Router();
 
+
+
+// router.get('/'. async (req, res) )
+
+
 router.get('/:musicianid', async (req, res, next) => {
     try {
         const musicianid = req.params.musicianid;
