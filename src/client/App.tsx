@@ -7,7 +7,7 @@ import Artist from "./components/artist";
 const App = (props: AppProps) => {
 	return (
 		<div className="container">
-			<h1>Magic City Musiq</h1>
+			<p className = "logo-1">Magic City Musiq</p>
 			<BrowserRouter>
 				<Switch>
 					<Route path={"/artist/:musicianmid"} component={Artist} />

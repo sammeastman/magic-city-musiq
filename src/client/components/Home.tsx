@@ -67,13 +67,10 @@ const Home = (props: IHomeProps) => {
             </div>
             <div className="row">
                 {musicians.map(musician => <MusicianCard key={musician.mid} musician={musician} />)}
-
-
-
+            <h2>Contact Us @ MagicCityMusiq@media.com</h2>
             </div>
-
         </div>
-
+        
     )
 }
 

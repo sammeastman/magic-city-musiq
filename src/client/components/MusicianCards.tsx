@@ -6,12 +6,12 @@ const MusicianCard = (props: IMusicianCardProps) => {
         <div className="card m-3 d-flex justify-content-between align-items-center flex-row">
             <div className="card-body">
                 <h6 className="card-subtitle mb-2 text-muted">@{props.musician.mname}</h6>
-                <p className="card-text">{props.musician.mbio}</p>
-                <p className="card-text">{props.musician.mspotifyid}</p>
-                <p className="card-text">{props.musician.mdob}</p>
-                <p className="card-text">{props.musician.mzodiac}</p>
-                <p className="card-text">{props.musician.mhometown}</p>
-                <p className="card-text">{props.musician.mage}</p>
+                <h1 className="card-text">{props.musician.mbio}</h1>
+                <h1 className="card-text">{props.musician.mspotifyid}</h1>
+                <h1 className="card-text">{props.musician.mdob}</h1>
+                <h1 className="card-text">{props.musician.mzodiac}</h1>
+                <h1 className="card-text">{props.musician.mhometown}</h1>
+                <h1 className="card-text">{props.musician.mage}</h1>
 ​
             </div>
             <div>

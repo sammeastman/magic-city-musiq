@@ -44,8 +44,8 @@ const Artist = (props: IArtistProps) => {
             <div className="card m-3 d-flex justify-content-between align-items-center flex-row">
                 <div className="card-body">
                     <h6 className="card-subtitle mb-2 text-muted">@{musicians?.mname}</h6>
-                    <p className="card-text">{musicians?.mband}</p>
-                    <p className="card-text">{musicians?.mbio}</p>
+                    <h1 className="card-text">{musicians?.mband}</h1>
+                    <h1 className="card-text">{musicians?.mbio}</h1>
                 </div>
                 <div>
                     {/* <Link to={`/admin/${musicians?.mid}`}>
@@ -57,11 +57,12 @@ const Artist = (props: IArtistProps) => {
             <div className="card m-3 d-flex justify-content-between align-items-center flex-row">
                 <div className="card-body">
                     <h6 className="card-subtitle mb-2 text-muted">@{musicians?.mname}</h6>
-                    <p className="card-text">{musicians?.mdob}</p>
-                    <p className="card-text">{musicians?.mzodiac}</p>
-                    <p className="card-text">{musicians?.mhometown}</p>
-                    <p className="card-text">{musicians?.mage}</p>
+                    <h1 className="card-text">{musicians?.mdob}</h1>
+                    <h1 className="card-text">{musicians?.mzodiac}</h1>
+                    <h1 className="card-text">{musicians?.mhometown}</h1>
+                    <h1 className="card-text">{musicians?.mage}</h1>
                 </div>
+                
                 <div>
                     {/* <Link to={`/admin/${props.musicians.mid}`}>
                         <button className="btn btn-sm btn-primary">Admin Options</button>
@@ -71,14 +72,13 @@ const Artist = (props: IArtistProps) => {
 
           
                 <div>
-            <iframe src={`https://open.spotify.com/embed/album/${musicians?.mspotifyid}`} width="300" height="380" frameBorder="0" allow="encrypted-media"></iframe>
+            <iframe src={`https://open.spotify.com/embed/album/${musicians?.mspotifyid}`} width="500" height="380" frameBorder="0" allow="encrypted-media"></iframe>
                 </div>
 
             {<><div id="social"> {'}'}
-                {<><a className="btn btn-primary" style={{ backgroundColor: "#3b5998" }} href="#!" role="button"
-                ><i className="fab fa-facebook-f"></i></a><a className="btn btn-primary" style={{ backgroundColor: "#55acee" }} href="#!" role="button"><i className="fab fa-twitter"></i></a></>}
+                {<><a className="btn btn-primary" style={{ backgroundColor: "#3b5998" }} href="#!" role="button"><i className="fab fa-facebook-f"></i></a><a className="btn btn-primary" style={{ backgroundColor: "#55acee" }} href="#!" role="button"><i className="fab fa-twitter"></i></a></>}
             </div><a className="btn btn-primary" style={{ backgroundColor: "#ac2bac" }} href="#!" role="button"><i className="fab fa-instagram"></i></a><a className="btn btn-primary" style={{ backgroundColor: "#ed302f" }} href="#!" role="button"><i className="fab fa-youtube"></i></a></>}
-
+            
         </>
 
     )
