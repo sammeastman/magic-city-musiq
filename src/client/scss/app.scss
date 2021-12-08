@@ -1,19 +1,17 @@
 $theme-colors: (
   "primary": green,
 );
-
 @media only screen and (min-width: 1400px) {
   .container {
     max-width: 1550px !important;
-
   }
 }
-
-
-h1{
+// .carousel {
+//   background-color: gray;
+// }
+h1 {
   text-align: center;
   //background-image: url("https://media.istockphoto.com/vectors/birmingham-city-skyline-black-and-white-silhouette-vector-id499134094?k=20&m=499134094&s=612x612&w=0&h=7vsx_sMg_hSNYDYYA4Wx_uoNnyXn9XmgX076jPBeW5Y=");
-
 }
 .row > a > img {
   max-width: 30%;
@@ -23,14 +21,20 @@ h1{
   justify-content: space-between;
   padding: 19px;
 }
-
 .row > a {
- display: contents;
- 
+  display: contents;
+  align-items: center;
 }
-
 h2 {
   text-align: center;
+  animation: neon 3s infinite;
+  color: rgb(253, 253, 253);
+  font-family: "Archivo Black", "Archivo", sans-serif;
+}
+h2:hover {
+  box-shadow: 0px 0px 10px rgb(173, 164, 173);
+  transition: 0.3s;
+  color: rgb(255, 255, 255);
 }
 .row-two > a > img {
   max-width: 30%;
@@ -38,22 +42,29 @@ h2 {
   flex-direction: row !important;
   padding-left: 200px;
 }
-.row  > a > img:hover {
-    -webkit-filter: invert(1);
-    filter: invert(1);
-    cursor: pointer;
+.event-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.event-container > a > div {
+  width: 525px;
+}
+.row > a > img:hover {
+  //-webkit-filter: invert(1);
+ // filter: invert(1);
+  cursor: pointer;
 }
 p:hover {
-    color: rgb(238, 238, 93);
-    cursor: pointer;
+  color: rgb(238, 238, 93);
+  cursor: pointer;
 }
-
 .container {
   background-color: #000000;
   padding-top: 7em;
 }
 :root {
-  --shadow-color: #FF9E9E;
+  --shadow-color: #ff9e9e;
   --shadow-color-light: white;
 }
 * {
@@ -84,37 +95,170 @@ p {
 }
 @keyframes neon {
   0% {
-    text-shadow: -1px -1px 1px var(--shadow-color-light),
-      -1px 1px 1px var(--shadow-color-light),
-      1px -1px 1px var(--shadow-color-light),
-      1px 1px 1px var(--shadow-color-light), 0 0 3px var(--shadow-color-light),
-      0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
-      0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color),
-      0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color),
+    text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light),
+      1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light), 0 0 3px var(--shadow-color-light),
+      0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light), 0 0 30px var(--shadow-color),
+      0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color),
       0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
   }
   50% {
-    text-shadow: -1px -1px 1px var(--shadow-color-light),
-      -1px 1px 1px var(--shadow-color-light),
-      1px -1px 1px var(--shadow-color-light),
-      1px 1px 1px var(--shadow-color-light), 0 0 5px var(--shadow-color-light),
-      0 0 15px var(--shadow-color-light), 0 0 25px var(--shadow-color-light),
-      0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color),
-      0 0 60px var(--shadow-color), 0 0 80px var(--shadow-color),
+    text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light),
+      1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light), 0 0 5px var(--shadow-color-light),
+      0 0 15px var(--shadow-color-light), 0 0 25px var(--shadow-color-light), 0 0 40px var(--shadow-color),
+      0 0 50px var(--shadow-color), 0 0 60px var(--shadow-color), 0 0 80px var(--shadow-color),
       0 0 110px var(--shadow-color), 0 0 210px var(--shadow-color);
   }
   100% {
-    text-shadow: -1px -1px 1px var(--shadow-color-light),
-      -1px 1px 1px var(--shadow-color-light),
-      1px -1px 1px var(--shadow-color-light),
-      1px 1px 1px var(--shadow-color-light), 0 0 3px var(--shadow-color-light),
-      0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
-      0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color),
-      0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color),
+    text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light),
+      1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light), 0 0 3px var(--shadow-color-light),
+      0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light), 0 0 30px var(--shadow-color),
+      0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color),
       0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
   }
 }
+.card-text {
+  color: black;
+  font-family: "Archivo Black", "Archivo", sans-serif;
+}
+.card-text2 {
+  padding-top: 35%;
+  padding-left: 600px;
+}
+.card-body {
+  // border: 1px solid white;
+  // background-image: url("https://c4.wallpaperflare.com/wallpaper/964/287/710/rain-window-sill-water-drops-bokeh-wallpaper-preview.jpg");
+  // width: 400px;
+  // height: 400px;
+  // display: flex;
+  // flex-direction: row;
+  float: left;
+  // background: burlywood;
+  margin: 10px;
+  border-radius: 5px;
+  transition: 0.5s;
+  // max-width: 50%;
+}
+#card-container {
+  display: flex;
+  flex-direction: row;
+  background-image: url("https://wallpaperaccess.com/full/1314202.jpg");
+}
+.card-body:hover {
+  box-shadow: 0px 0px 20px rgb(90, 89, 90);
+  transition: 0.3s;
+  //animate: glow;
+}
+.spotify-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+// .card {
+//   max-width: 50%;
+//   background-color: rgb(146, 146, 146);
+// }
+#carouselExampleSlidesOnly {
+  max-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // padding-top: 35%;
+}
+#social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+// .btn {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
+.bio-container {
+  .column {
+    .band-img {
+      max-width: 400px;
+    }
 
+    .card-container {
+      width: 100%;
+    }
 
+    .social > img {
+      max-width: 20px;
+    }
+
+    @media screen and (min-width: 700px) {
+      width: 33%;
+    }
+  }
+}
+
+@mixin dots($count) {
+  $text-shadow: ();
+  @for $i from 0 through $count {
+    $text-shadow: $text-shadow,
+      (-0.5+ (random()) * 3) + em (-0.5+ (random()) * 3) + em 7px hsla(random() * 360, 100%, 50%, 0.9);
+  }
+  text-shadow: $text-shadow;
+}
+html {
+  // font: 5vmin/1.3 Serif;
+  // overflow: hidden;
+  background: #123;
+}
+/*body,
+head {
+  display: block;
+  font-size: 42px;
+  color: transparent;
+}*/
+head::before,
+head::after,
+body::before,
+body::after {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 3em;
+  height: 3em;
+  content: ".";
+  mix-blend-mode: screen;
+  animation: 44s -27s move infinite ease-in-out alternate;
+}
+body::before {
+
+  @include dots(30);
+  animation-duration: 44s;
+  animation-delay: -27s;
+}
+body::after {
+  @include dots(30);
+  animation-duration: 43s;
+  animation-delay: -32s;
+}
+head::before {
+  @include dots(40);
+  animation-duration: 42s;
+  animation-delay: -23s;
+}
+head::after {
+  @include dots(40);
+  animation-duration: 41s;
+  animation-delay: -19s;
+}
+@keyframes move {
+  from {
+    transform: rotate(0deg) scale(12) translateX(-20px);
+  }
+  to {
+    transform: rotate(360deg) scale(18) translateX(20px);
+  }
+}
+.card{
+  background:linear-gradient(135deg, #3E1049 0%,#3A4553 100%);
+}
